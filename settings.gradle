@@ -1,0 +1,3 @@
+rootProject.name = 'deeplay-algos'
+include 'task1'
+
