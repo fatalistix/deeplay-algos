@@ -1,7 +1,6 @@
 rootProject.name = 'deeplay-algos'
+include 'common-utils'
 include 'task1'
 include 'task2'
-include 'common-utils'
-include 'task4'
 include 'task3'
 
