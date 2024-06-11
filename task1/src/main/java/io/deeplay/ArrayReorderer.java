@@ -2,7 +2,6 @@ package io.deeplay;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class ArrayReorderer {
 
