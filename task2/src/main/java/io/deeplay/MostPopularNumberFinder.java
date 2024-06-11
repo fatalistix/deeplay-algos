@@ -12,9 +12,9 @@ public class MostPopularNumberFinder {
 
         for (int number : array) {
             if (map.containsKey(number)) {
-                int count = map.get(number);
-                map.put(number, count + 1);
-                maxCount = Math.max(maxCount, count);
+                int newCount = map.get(number) + 1;
+                map.put(number, newCount);
+                maxCount = Math.max(maxCount, newCount);
             } else {
                 map.put(number, 1);
                 maxCount = Math.max(maxCount, 1);
