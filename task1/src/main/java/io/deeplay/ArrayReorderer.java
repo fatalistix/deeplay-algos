@@ -1,6 +1,8 @@
 package io.deeplay;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ArrayReorderer {
 
@@ -27,7 +29,15 @@ public class ArrayReorderer {
             }
         }
 
-        Arrays.sort(array, 0, lastOddPosition + 1);
-        Arrays.sort(array, firstEvenPosition, array.length);
+        // Cannot sort int[] array in reverse order due to generic comparator function,
+        // so we need to use boxed array (yes, it's not efficient)
+        Integer[] boxedArray = Arrays.stream(array).boxed().toArray(Integer[]::new);
+
+        Arrays.sort(boxedArray, 0, lastOddPosition + 1);
+        Arrays.sort(boxedArray, firstEvenPosition, array.length, Collections.reverseOrder());
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = boxedArray[i];
+        }
     }
 }
