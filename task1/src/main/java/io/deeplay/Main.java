@@ -8,7 +8,7 @@ public class Main {
         ArrayPrinter arrayPrinter = new ArrayPrinter();
         ArrayReorderer arrayReorderer = new ArrayReorderer();
 
-        arrayRandomFiller.fillWithRandomNumbers(array, 2, 2);
+        arrayRandomFiller.fillWithRandomNumbers(array, -2, 2);
 
         arrayPrinter.printArray(array);
 
